@@ -1,0 +1,7 @@
+version: "17.0.1"
+services: 
+ keycloak:
+    container_name: Keycloak_Invinsense
+    build: ./keycloak_theme
+    ports:
+      - 8080:8080
