@@ -2,7 +2,7 @@ FROM quay.io/keycloak/keycloak:latest as builder
 
 FROM quay.io/keycloak/keycloak:latest
 COPY --from=builder /opt/keycloak/lib/quarkus/ /opt/keycloak/lib/quarkus/
-COPY ./themes/. /opt/keycloak/providers/
+COPY ./keycloak_theme/. /opt/keycloak/providers/
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin
 WORKDIR /opt/keycloak
